@@ -10,9 +10,11 @@ const Container = styled(Box)`
 `
 
 function Python() {
+  const [result, setResult] = useState(null);
   const [python, setPython] = useState('')
+  console.log(result)
 
-  return (
+  return (<>
     <Container>
       <Editor
         language='python'
@@ -21,8 +23,14 @@ function Python() {
         onChange={setPython}
         icon='Py'
         color='#FCD000'
+        setResult={setResult}
       />
     </Container>
+    <div>
+        <p>Result: {result}</p> {/* Display the result */}
+        {/* Render your other component here that needs access to the result */}
+      </div>
+    </>
   )
 }
 

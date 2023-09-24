@@ -1,8 +1,13 @@
-.container {
-  background-color: #151515;
-  width: 100vw;
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  max-width: 100%;
+
+.CodeMirror {
+  height: 340px !important;
+  color: #fff;
+}
+
+.CodeMirror-gutters {
+  background: #1d1e22 !important;
+}
+
+.CodeMirror-scroll {
+  background: #1d1e22;
 }
