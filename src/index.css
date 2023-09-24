@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  font-family: Menlo, monospace;
+  font-size: 13px;
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+}
