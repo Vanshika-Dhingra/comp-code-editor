@@ -49,24 +49,24 @@ const Editor = ({ heading, language, value, onChange, icon, color,setResult }) =
       // console.log('Code executed successfully:', result);
       // setResult(result);
       // Create an array to capture the log output
-const logOutput = [];
+  const logOutput = [];
 
-// Override console.log to capture its output
-const originalLog = console.log;
-console.log = function (...args) {
+  // Override console.log to capture its output
+  const originalLog = console.log;
+  console.log = function (...args) {
   originalLog.apply(console, args); // Call the original console.log
   logOutput.push(...args); // Capture the logged values
-};
+  };
 
-eval(value); // Execute the code
+  eval(value); // Execute the code
 
 // Restore console.log to its original state
-console.log = originalLog;
+  console.log = originalLog;
 
 // The logOutput array now contains the captured log values
 console.log(logOutput);
-const result = logOutput.join(', ');
-setResult(result);
+  const result = logOutput.join(', ');
+  setResult(result);
     } catch (error) {
       console.error('Error executing code:', error);
       setResult(`Error: ${error.message}`);
