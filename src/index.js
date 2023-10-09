@@ -1,11 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
+'use strict';
+
+import './index.css';
+import App from './App';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App type='language' language='javascript' />
-  </React.StrictMode>,
-  document.getElementById('root')
-)
+  React.createElement(
+    React.StrictMode,
+    null,
+    React.createElement(App, { type: 'language', language: 'javascript' })
+  ),
+  document.querySelector('#like_button_container')
+);
